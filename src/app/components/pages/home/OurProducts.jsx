@@ -56,7 +56,7 @@ export default function OurProducts() {
         {/* Header */}
         <div className="mb-16 flex justify-between items-center flex-wrap gap-6">
           <div>
-            <div className="inline-block bg-primary/10 text-primary font-semibold px-4 py-1 rounded-full text-sm mb-4">
+            <div className="inline-block bg-primary/20 text-primary font-semibold px-4 py-1 rounded-full text-sm mb-4">
               Our Products
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-[#0A1635] mb-4">
@@ -70,7 +70,7 @@ export default function OurProducts() {
 
           <a
             href="/products"
-            className="inline-block bg-primary text-white font-semibold px-10 py-3 rounded-full shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            className="inline-block bg-primary text-white hover:bg-secondary font-semibold px-10 py-3 rounded-full shadow-md  transition-all duration-300"
           >
             View All Products
           </a>

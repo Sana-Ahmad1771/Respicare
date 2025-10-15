@@ -85,7 +85,7 @@ export default function HeroSlider() {
 
                     <Link
                       href="/about"
-                      className="mt-6 inline-block bg-white text-[var(--primary)] font-semibold px-6 py-3 rounded-full shadow-md hover:bg-[#f3f3f3] transition-all duration-300"
+                      className="mt-6 inline-block bg-white text-[var(--primary)] font-semibold px-6 py-3 rounded-full shadow-md hover:bg-secondary hover:text-white transition-all duration-300"
                     >
                       Learn More
                     </Link>

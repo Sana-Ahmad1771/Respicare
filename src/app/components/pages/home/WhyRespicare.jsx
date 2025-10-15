@@ -8,7 +8,7 @@ export default function WhyRespicare() {
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-16 xl:px-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         {/* Left Content */}
         <div>
-          <div className="inline-block bg-primary text-white font-semibold px-4 py-1 rounded-full text-sm mb-4">
+          <div className="inline-block bg-primary/20 text-primary font-semibold px-4 py-1 rounded-full text-sm mb-4">
             Why Choose Us
           </div>
 
@@ -28,7 +28,7 @@ export default function WhyRespicare() {
             driving progress in respiratory healthcare.
           </p>
 
-          <button className="inline-block bg-primary text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-[#022a66] transition-all duration-300">
+          <button className="inline-block bg-primary text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-secondary transition-all duration-300">
             Get Started
           </button>
         </div>
@@ -90,6 +90,7 @@ export default function WhyRespicare() {
 
       {/* <div className="absolute left-0 bottom-0 hidden md:block h-full bg-gradient-to-r from-primary/30 to-transparent w-[300px] sm:w-[450px] lg:w-[600px]"></div> */}
       <div className="absolute z-10 right-0 bottom-0 hidden md:block h-full bg-gradient-to-l from-primary/30 to-transparent w-[300px] sm:w-[450px] lg:w-[680px]"></div>
+    
     </section>
   );
 }

@@ -37,7 +37,7 @@ export default function Ventilation() {
 
         {/* Right Content */}
         <div className="order-2 text-center lg:text-left">
-          <div className="inline-block bg-primary text-white font-semibold px-4 py-1 rounded-full text-sm mb-4">
+          <div className="inline-block bg-primary/20 text-primary font-semibold px-4 py-1 rounded-full text-sm mb-4">
             Our Expertise
           </div>
 
@@ -72,7 +72,7 @@ export default function Ventilation() {
             </li>
           </ul>
 
-          <button className="inline-block bg-primary text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-[#022a66] transition-all duration-300">
+          <button className="inline-block bg-primary text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-secondary transition-all duration-300">
             Get Started
           </button>
         </div>
