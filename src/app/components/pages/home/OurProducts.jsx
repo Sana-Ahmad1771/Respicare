@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
@@ -48,11 +48,13 @@ const products = [
 ];
 
 export default function OurProducts() {
+  const swiperRef = useRef(null);
+
   return (
     <section className="relative w-full py-24 bg-gradient-to-b from-white via-[#f6f8ff] to-white overflow-hidden">
       <div className="max-w-[1500px] mx-auto px-6 lg:px-16">
-        <div className="mb-16 flex justify-between items-center">
-          {/* Header */}
+        {/* Header */}
+        <div className="mb-16 flex justify-between items-center flex-wrap gap-6">
           <div>
             <div className="inline-block bg-primary/10 text-primary font-semibold px-4 py-1 rounded-full text-sm mb-4">
               Our Products
@@ -60,26 +62,24 @@ export default function OurProducts() {
             <h2 className="text-4xl lg:text-5xl font-bold text-[#0A1635] mb-4">
               Innovation with <span className="text-primary">Purpose</span>
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            <p className="text-gray-600 max-w-2xl text-lg">
               Cutting-edge equipment and solutions redefining standards in
               healthcare, research, and industry.
             </p>
           </div>
 
-          {/* View All Button */}
-          <div className="text-center mt-12">
-            <a
-              href="/products"
-              className="inline-block bg-primary text-white font-semibold px-10 py-3 rounded-full shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-            >
-              View All Products
-            </a>
-          </div>
+          <a
+            href="/products"
+            className="inline-block bg-primary text-white font-semibold px-10 py-3 rounded-full shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          >
+            View All Products
+          </a>
         </div>
 
         {/* Swiper */}
         <Swiper
           modules={[Pagination, Autoplay]}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
           pagination={{
             clickable: true,
             renderBullet: (index, className) =>
@@ -92,7 +92,7 @@ export default function OurProducts() {
           loop={true}
           speed={3500}
           spaceBetween={30}
-          grabCursor={true}
+          grabCursor={true} // ✅ allows dragging with mouse
           slidesPerView={1}
           breakpoints={{
             640: { slidesPerView: 2 },
@@ -108,6 +108,16 @@ export default function OurProducts() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group relative overflow-hidden rounded-3xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2"
+                onMouseEnter={() => {
+                  // ✅ Slow down autoplay when hovering
+                  if (swiperRef.current) swiperRef.current.params.autoplay.delay = 5000;
+                  swiperRef.current.autoplay.stop();
+                }}
+                onMouseLeave={() => {
+                  // ✅ Resume normal autoplay when leaving
+                  if (swiperRef.current) swiperRef.current.params.autoplay.delay = 0;
+                  swiperRef.current.autoplay.start();
+                }}
               >
                 <div className="relative h-[400px] w-full">
                   <Image
@@ -117,6 +127,7 @@ export default function OurProducts() {
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
 
+                  {/* Dark gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-70 group-hover:opacity-80 transition-all duration-500"></div>
 
                   <div className="absolute bottom-6 left-6 right-6 text-white z-10">
@@ -141,7 +152,7 @@ export default function OurProducts() {
       <div className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
       <div className="absolute bottom-0 right-10 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl -z-10 animate-pulse"></div>
 
-      {/* Custom CSS for Swiper pagination bullets */}
+      {/* Custom pagination bullets */}
       <style jsx global>{`
         .swiper-pagination-bullet {
           background-color: #ebe4ec;
