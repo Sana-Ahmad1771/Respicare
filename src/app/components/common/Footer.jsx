@@ -93,12 +93,12 @@ const Footer = () => {
             <li>
               <Link href="/products" className="hover:text-primary">Our Products</Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/partners" className="hover:text-primary">Our Partners</Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link href="/career" className="hover:text-primary">Career</Link>
-            </li>
+            </li> */}
             <li>
               <Link href="/contact" className="hover:text-primary">Contact</Link>
             </li>
