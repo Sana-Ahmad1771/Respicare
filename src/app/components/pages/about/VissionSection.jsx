@@ -1,46 +1,40 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { FaCheckCircle } from "react-icons/fa";
 
 export default function VisionSection() {
   return (
     <section className="relative w-full py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      {/* Consistent container alignment */}
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-16 xl:px-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        
         {/* Left Image Section */}
         <div className="relative order-1 flex justify-center lg:justify-start">
           <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl">
-            {/* Image Card */}
+            {/* Image */}
             <div className="relative z-30 rounded-2xl overflow-hidden shadow-lg group">
               <Image
                 src="/images/service-03.jpg"
                 alt="Our Vision - Respicare"
                 width={600}
                 height={500}
-                className="object-cover w-full h-auto rounded-2xl"
+                className="object-cover w-full h-auto rounded-2xl transition-transform duration-500 group-hover:scale-105"
                 priority
               />
 
-              {/* Overlay Info Card
-              <div className="absolute z-40 bottom-4 sm:bottom-6 left-4 sm:left-6 bg-primary text-white p-4 sm:p-5 rounded-xl shadow-xl max-w-[90%] sm:max-w-sm flex items-start gap-3">
-                <FaCheckCircle className="text-white text-2xl sm:text-3xl mt-1 flex-shrink-0" />
-                <p className="text-xs sm:text-sm md:text-base leading-snug font-medium">
-                  When breathing is compromised, quality of life diminishes. Our
-                  spirometry and PFT solutions deliver clarity for accurate
-                  diagnosis.
-                </p>
-              </div> */}
+              {/* Optional Hover Overlay */}
+              <div className="absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
             </div>
-            {/* Background Accent */}
+
+            {/* Background Accent Shapes */}
             <div className="absolute z-10 -top-4 -right-4 w-[60%] h-[60%] bg-primary/90 rounded-tr-2xl rounded-bl-3xl shadow-lg hidden sm:block"></div>
-            {/* Background Accent Shape */}
             <div className="absolute z-10 -bottom-4 -left-4 w-[60%] h-[60%] bg-primary/90 rounded-bl-2xl shadow-lg hidden sm:block"></div>
           </div>
         </div>
 
         {/* Right Content Section */}
-        <div className="order-2 text-center lg:text-left">
-          <div className="inline-block bg-primary/20 text-primary font-semibold px-4 py-1 rounded-full text-sm mb-4">
+        <div className="order-2 text-center lg:text-left relative z-20">
+          <div className="inline-block bg-primary/15 text-primary font-semibold px-4 py-1 rounded-full text-sm mb-4">
             About Company
           </div>
 

@@ -129,17 +129,17 @@ const Header = () => {
                 <span className={navItemBorderClass("/products")} />
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/partners" className={navItemClass("/partners")}>
                 Our Partners{" "}
                 <span className={navItemBorderClass("/partners")} />
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link href="/career" className={navItemClass("/career")}>
                 Career <span className={navItemBorderClass("/career")} />
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link href="/contact" className={navItemClass("/contact")}>
                 Contact <span className={navItemBorderClass("/contact")} />
@@ -186,7 +186,7 @@ const Header = () => {
                   { href: "/", label: "Home" },
                   { href: "/about", label: "About Us" },
                   { href: "/products", label: "Our Products" },
-                  { href: "/career", label: "Career" },
+                  // { href: "/career", label: "Career" },
                   { href: "/contact", label: "Contact" },
                 ].map((item) => (
                   <li key={item.href}>

@@ -6,13 +6,17 @@ import { FaCheckCircle, FaAward } from "react-icons/fa";
 export default function Ventilation() {
   return (
     <section className="relative w-full py-16 sm:py-20 lg:py-24 bg-white">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      {/* Container with consistent alignment */}
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-16 xl:px-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        
         {/* Left Image Section */}
         <div className="relative order-1 flex justify-center lg:justify-start">
           <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl">
+            
+            {/* Image Card */}
             <div className="relative z-30 rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/images/ventilation.jpg" // 🩺 Replace with your ventilation image
+                src="/images/ventilation.jpg"
                 alt="Ventilation System"
                 width={600}
                 height={500}
@@ -35,7 +39,7 @@ export default function Ventilation() {
           </div>
         </div>
 
-        {/* Right Content */}
+        {/* Right Content Section */}
         <div className="order-2 text-center lg:text-left">
           <div className="inline-block bg-primary/20 text-primary font-semibold px-4 py-1 rounded-full text-sm mb-4">
             Our Expertise

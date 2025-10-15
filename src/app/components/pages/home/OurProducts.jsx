@@ -52,7 +52,7 @@ export default function OurProducts() {
 
   return (
     <section className="relative w-full py-24 bg-gradient-to-b from-white via-[#f6f8ff] to-white overflow-hidden">
-      <div className="max-w-[1500px] mx-auto px-6 lg:px-16">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-16 xl:px-24">
         {/* Header */}
         <div className="mb-16 flex justify-between items-center flex-wrap gap-6">
           <div>

@@ -1,15 +1,17 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { FaCheckCircle, FaAward } from "react-icons/fa";
+import { FaAward } from "react-icons/fa";
 
 export default function AboutCompany() {
   return (
-    <section className="relative w-full py-16 sm:py-20 lg:py-24 bg-white">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <section className="relative w-full py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
+      {/* Container aligned with header/footer */}
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-16 xl:px-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        
         {/* Left Content */}
-        <div className="order-2 lg:order-1 text-center lg:text-left">
-          <div className="inline-block bg-primary/20 text-primary font-semibold px-4 py-1 rounded-full text-sm mb-4">
+        <div className="order-2 lg:order-1 text-center lg:text-left relative z-20">
+          <div className="inline-block bg-primary/15 text-primary font-semibold px-4 py-1 rounded-full text-sm mb-4">
             About Company
           </div>
 
@@ -32,6 +34,7 @@ export default function AboutCompany() {
         {/* Right Image Section */}
         <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end">
           <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl">
+            {/* Image */}
             <div className="relative z-30 rounded-2xl overflow-hidden shadow-lg">
               <Image
                 src="/images/service-06.jpg"
@@ -45,7 +48,8 @@ export default function AboutCompany() {
 
             {/* Background Accent */}
             <div className="absolute z-10 -top-4 -right-4 w-[60%] h-[60%] bg-primary/90 rounded-tr-2xl rounded-bl-3xl shadow-lg hidden sm:block"></div>
-            {/* Overlay Card */}
+
+            {/* Floating Card */}
             <div className="absolute z-30 bottom-4 sm:bottom-6 left-4 sm:left-6 bg-primary text-white p-4 sm:p-5 rounded-xl shadow-lg max-w-[90%] sm:max-w-sm flex items-start gap-3">
               <FaAward className="text-2xl sm:text-3xl mt-1 flex-shrink-0" />
               <p className="text-xs sm:text-sm md:text-base leading-snug">
@@ -57,8 +61,8 @@ export default function AboutCompany() {
         </div>
       </div>
 
-    <div className="absolute z-10 right-0 bottom-0 hidden md:block h-full bg-gradient-to-l from-primary/30 to-transparent w-[300px] sm:w-[450px] lg:w-[680px]"></div>
-   
+      {/* Decorative Gradient (Aligned properly to container edge) */}
+      <div className="absolute z-10 right-0 bottom-0 hidden md:block h-full bg-gradient-to-l from-primary/30 to-transparent w-[300px] sm:w-[450px] lg:w-[680px]"></div>
     </section>
   );
 }

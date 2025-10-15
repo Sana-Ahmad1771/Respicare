@@ -1,16 +1,16 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { FaCheckCircle } from "react-icons/fa";
 
 export default function MissionSection() {
   return (
     <section className="relative w-full py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      {/* ✅ Same container as header/footer */}
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-16 xl:px-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         
-        {/* Left Content Section */}
+        {/* ✅ Left Content Section */}
         <div className="order-2 lg:order-1 text-center lg:text-left">
-          <div className="inline-block bg-primary/20 text-primary font-semibold px-4 py-1 rounded-full text-sm mb-4">
+          <div className="inline-block bg-primary/15 text-primary font-semibold px-4 py-1 rounded-full text-sm mb-4">
             About Company
           </div>
 
@@ -19,10 +19,11 @@ export default function MissionSection() {
           </h2>
 
           <p className="text-gray-600 mb-8 text-sm sm:text-base md:text-lg leading-relaxed">
-            When breathing is compromised, quality of life diminishes. Our
-            family of spirometry, complete PFT, and CPET testing products help
-            to classify pathophysiology and offer valuable information for
-            differential diagnoses.
+            Our mission is to enhance respiratory health through innovation,
+            precision, and care. We aim to empower medical professionals with
+            accurate diagnostic tools that ensure early detection, effective
+            treatment, and improved patient outcomes — bringing every breath
+            closer to comfort.
           </p>
 
           <button className="inline-block bg-primary text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-secondary transition-all duration-300">
@@ -30,7 +31,7 @@ export default function MissionSection() {
           </button>
         </div>
 
-        {/* Right Image Section */}
+        {/* ✅ Right Image Section */}
         <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end">
           <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl">
             {/* Image Card */}
@@ -40,9 +41,12 @@ export default function MissionSection() {
                 alt="Our Mission - Respicare"
                 width={600}
                 height={500}
-                className="object-cover w-full h-auto rounded-2xl"
+                className="object-cover w-full h-auto rounded-2xl transition-transform duration-500 group-hover:scale-105"
                 priority
               />
+
+              {/* Optional Hover Overlay */}
+              <div className="absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
             </div>
 
             {/* Background Accent Shapes */}

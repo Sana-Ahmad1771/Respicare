@@ -98,7 +98,7 @@ export default function HeroSlider() {
       </Swiper>
 
       {/* Pagination Dots */}
-      <div className="hero-pagination absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex justify-center"></div>
+      {/* <div className="hero-pagination z-30 absolute bottom-8 left-1/2 -translate-x-1/2 flex justify-center"></div> */}
 
       {/* Navigation Arrows */}
       <div className="absolute bottom-0 right-0 z-20">

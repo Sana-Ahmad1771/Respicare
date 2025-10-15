@@ -5,7 +5,7 @@ import { FaUserMd, FaHospital, FaPills, FaAmbulance } from "react-icons/fa";
 export default function WhyRespicare() {
   return (
     <section className="relative w-full min-h-screen flex items-center bg-white py-12 sm:py-20 lg:py-24">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-16 xl:px-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-16 xl:px-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         {/* Left Content */}
         <div>
           <div className="inline-block bg-primary/20 text-primary font-semibold px-4 py-1 rounded-full text-sm mb-4">

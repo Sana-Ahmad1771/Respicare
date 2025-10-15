@@ -19,6 +19,7 @@
   --font-sans: "Poppins", "Inter", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: var(--font-geist-mono);
+
   --color-primary: #95669d;
   --color-secondary: #4087b8;
   --color-primary-light: #a36eac;
@@ -29,12 +30,14 @@
   --color-dark: #804d41;
   --color-light: #eae5e9;
 
-  
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
   
   /* ===== Default Custom Palette (Light) ===== */
+
+  --color-black-1:#0A1635;
   --color-dark-1: #323232;
   --color-dark-2: #333333;
   --color-accent: #3ac0bc;
@@ -58,4 +61,37 @@
 }
 body {
   font-family: 'Poppins', 'Inter', Arial, Helvetica, sans-serif;
+}
+.process-icon {
+  position: relative;
+  transition: all 0.4s linear;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  background-color: var(--pureWhite, #fff);
+  z-index: 1;
+}
+
+/* Hover background fill animation */
+.process-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.6rem;
+  background-color: var(--mainColor, #95669d); /* your primary color */
+  transform: scale(0);
+  transform-origin: center;
+  transition: all 0.4s cubic-bezier(0.62, 0.21, 0.45, 1.52);
+  z-index: 0;
+}
+
+/* Hover effect — background grows and icon inverts color */
+.process-icon:hover::before {
+  transform: scale(1);
+}
+
+.process-icon:hover {
+  color: white;
 }
