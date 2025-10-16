@@ -66,7 +66,7 @@ export default function ServicesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group relative rounded-2xl h-[410px] overflow-visible flex flex-col items-center"
+                className="group relative rounded-2xl lg:h-[410px] overflow-visible flex flex-col items-center"
               >
                 {/* Image with animated overlay */}
                 <div className="relative w-full h-56 rounded-2xl overflow-hidden shadow-md">
@@ -107,9 +107,9 @@ export default function ServicesSection() {
                 <div className="relative flex items-center justify-center w-full h-fit">
                   <div
                     className="
-                      w-[90%] bg-white rounded-xl p-6 shadow-md text-center 
+                      w-[90%] bg-white rounded-xl p-2 md:p-3 lg:p-4 2xl:p-6  shadow-md text-center 
                       transition-all duration-500 group-hover:shadow-lg 
-                      min-h-[170px] md:h-[300px] xl:h-[200px] flex flex-col justify-center 
+                      min-h-[170px] md:h-[300px] lg:h-[400px] xl:h-[200px] flex flex-col justify-center 
                       -mt-10 sm:-mt-12 
                       lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:top-[10px] 
                       lg:w-[85%] z-30
