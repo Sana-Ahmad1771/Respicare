@@ -1,10 +1,15 @@
 "use client";
-import contactbg from "../../../../../public/images/hero-slider-1.jpg";
+import { useSearchParams } from "next/navigation";
+import productbg from "../../../../../public/images/hero-slider-3.jpg";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { GoDotFill } from "react-icons/go";
 
-export const ContactHero = () => {
+const Products = () => {
+  const searchParams = useSearchParams();
+  const selected = searchParams.get("category");
+  const display = selected ? selected.replaceAll(",", ", ") : "All";
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -13,7 +18,7 @@ export const ContactHero = () => {
       viewport={{ once: true }}
       className="relative bg-fixed bg-center bg-cover bg-no-repeat min-h-[40vh] md:min-h-[50vh] flex items-center justify-center text-white overflow-hidden"
       style={{
-        backgroundImage: `url(${contactbg.src})`,
+        backgroundImage: `url(${productbg.src})`,
       }}
     >
       {/* Overlay */}
@@ -30,7 +35,7 @@ export const ContactHero = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl mb-1 lg:text-5xl font-bold tracking-tight"
           >
-            Get In Touch With Us
+            Our Products
           </motion.h1>
           {/* Divider */}
           <motion.div
@@ -53,9 +58,13 @@ export const ContactHero = () => {
             Home
           </Link>
           <GoDotFill />
-          <span>Contact</span>
+          <span>Products</span>
+          <GoDotFill />
+          <span>{display}</span>
         </motion.div>
       </div>
     </motion.section>
   );
 };
+
+export default Products;

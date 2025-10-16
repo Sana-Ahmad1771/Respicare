@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "One-piece Colostomy Bag",
+    "category": "One-piece Colostomy Bag",
+    "image": "/products/product1.svg"
+  },
+  {
+    "id": 2,
+    "title": "One-piece Ostomy Bag",
+    "category": "One-piece Ostomy Bag",
+    "image": "/products/product2.svg"
+  },
+  {
+    "id": 3,
+    "title": "Two-piece Ostomy Bag",
+    "category": "Two-piece Ostomy Bag",
+    "image": "/products/product1.svg"
+  }
+]
