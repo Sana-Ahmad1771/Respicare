@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Header from "../../components/common/Header";
 import Footer from "../../components/common/Footer";
-import productsData from "../../components/Pages/products/productsData.json";
+import productsData from "../../components/Pages/products/ProductsData.json";
 import Image from "next/image";
 
 export async function generateMetadata({ params }) {
