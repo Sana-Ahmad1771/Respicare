@@ -3,7 +3,7 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 // Import client components
 import Products from "../components/Pages/products/Products";
-import Filters from "../components/Pages/products/Filter";
+import Filters from "../components/pages/products/Filters";
 
 export const metadata = {
   title: "Our Products | Respicare",
