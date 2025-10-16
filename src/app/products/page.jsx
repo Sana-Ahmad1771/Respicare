@@ -46,15 +46,8 @@ const Page = () => {
   return (
     <>
       <Header />
-
-      <Suspense fallback={<div>Loading Products Header...</div>}>
-        <Products />
-      </Suspense>
-
-      <Suspense fallback={<div>Loading Filters...</div>}>
-        <Filters />
-      </Suspense>
-
+      <Products />
+      <Filters />
       <Footer />
     </>
   );
