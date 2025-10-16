@@ -49,7 +49,7 @@ export default function VisionSection() {
             differential diagnoses.
           </p>
 
-          <button className="inline-block bg-primary text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-secondary transition-all duration-300">
+          <button className="inline-block cursor-pointer bg-primary text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-secondary transition-all duration-300">
             Get Start
           </button>
         </div>

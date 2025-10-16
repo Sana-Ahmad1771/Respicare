@@ -162,7 +162,7 @@ export default function ContactFormSection() {
 
               <button
                 type="submit"
-                className="w-fit bg-primary text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-secondary transition-all duration-300"
+                className="w-fit cursor-pointer bg-primary text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-secondary transition-all duration-300"
               >
                 Submit
               </button>

@@ -133,7 +133,7 @@ const Filters = () => {
           {/* ✅ Clear All Button */}
           <button
             onClick={clearAll}
-            className="mt-4 px-4 py-2 bg-primary/10 text-primary hover:bg-primary hover:text-white rounded-lg text-sm font-medium transition-all"
+            className="mt-4 px-4 py-2 cursor-pointer bg-primary/10 text-primary hover:bg-primary hover:text-white rounded-lg text-sm font-medium transition-all"
           >
             Clear All
           </button>
