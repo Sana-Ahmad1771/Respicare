@@ -1,20 +1,26 @@
 [
   {
     "id": 1,
+    "slug": "one-piece-colostomy-bag",
     "title": "One-piece Colostomy Bag",
     "category": "One-piece Colostomy Bag",
-    "image": "/products/product1.svg"
+    "image": "/products/product1.svg",
+    "description": "Our One-piece Colostomy Bag is designed for maximum comfort, flexibility, and security. It provides an easy-to-use single system with high-quality adhesive and a soft backing that conforms to your body, ensuring a leak-proof experience for everyday use."
   },
   {
     "id": 2,
+    "slug": "one-piece-ostomy-bag",
     "title": "One-piece Ostomy Bag",
     "category": "One-piece Ostomy Bag",
-    "image": "/products/product2.svg"
+    "image": "/products/product1.svg",
+    "description": "The One-piece Ostomy Bag combines a discreet, lightweight design with reliable performance. It features an odor-resistant filter and skin-friendly adhesive, making it ideal for daily wear and active lifestyles."
   },
   {
     "id": 3,
+    "slug": "two-piece-ostomy-bag",
     "title": "Two-piece Ostomy Bag",
     "category": "Two-piece Ostomy Bag",
-    "image": "/products/product1.svg"
+    "image": "/products/product1.svg",
+    "description": "The Two-piece Ostomy Bag offers superior convenience with a detachable pouch and skin barrier system. This design allows for easy bag changes without removing the adhesive base, ensuring comfort, hygiene, and efficiency."
   }
 ]

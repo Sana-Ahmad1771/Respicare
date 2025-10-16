@@ -8,9 +8,9 @@ import { FiFilter } from "react-icons/fi";
 import Image from "next/image";
 
 // Import product images (adjust paths if needed)
-import product1 from "../../../product-images/product1.svg";
-import product2 from "../../../product-images/product1.svg";
-import product3 from "../../../product-images/product1.svg";
+import product1 from "../../../../../public/products/product1.svg";
+import product2 from "../../../../../public/products/product1.svg";
+import product3 from "../../../../../public/products/product1.svg";
 
 // Map image filenames to imports
 const imageMap = {
@@ -44,11 +44,11 @@ const Filters = () => {
 
   const categories = ["All", ...new Set(productsData.map((p) => p.category))];
 
+  // ✅ Only fix: prevent scroll-to-top when filter changes
   const updateSearchParams = (categories) => {
     const query = categories.length ? `?category=${categories.join(",")}` : "";
-    router.push(`/products${query}`);
+    router.push(`/products${query}`, { scroll: false });
   };
-
   const toggleCategory = (category) => {
     if (category === "All") {
       clearAll();
@@ -179,7 +179,12 @@ const Filters = () => {
                   </div>
                 </div>
 
-                <button className="mt-3 w-full bg-primary/10 hover:bg-primary text-primary hover:text-white font-medium py-2 text-sm rounded-lg transition-all">
+                <button
+                  onClick={() =>
+                    router.push(`/products/${product.slug}`)
+                  }
+                  className="mt-3 w-full cursor-pointer bg-primary/10 hover:bg-primary text-primary hover:text-white font-medium py-2 text-sm rounded-lg transition-all"
+                >
                   View Details
                 </button>
               </div>
