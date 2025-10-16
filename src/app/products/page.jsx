@@ -19,7 +19,7 @@ export const metadata = {
     siteName: "Respicare",
     images: [
       {
-        url: "https://respicare-seven.vercel.app/og/products.png",
+        url: "https://respicare-seven.vercel.app/images/hero-slider-3.jpg",
         width: 1200,
         height: 630,
         alt: "Respicare Products",
@@ -33,7 +33,7 @@ export const metadata = {
     title: "Respicare Products",
     description:
       "Browse Respicare’s reliable range of respiratory and medical care equipment.",
-    images: ["/og/products.png"],
+    images: ["/images/hero-slider-3.jpg"],
   },
   robots: {
     index: true,
@@ -45,13 +45,11 @@ const Page = () => {
   return (
     <>
       <Header />
-
       {/* ✅ Wrap components using useSearchParams in Suspense */}
       <Suspense fallback={<div className="text-center py-20">Loading...</div>}>
         <Products />
         <Filters />
       </Suspense>
-
       <Footer />
     </>
   );

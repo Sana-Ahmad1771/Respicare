@@ -22,7 +22,7 @@ export const metadata = {
     siteName: "Respicare",
     images: [
       {
-        url: "https://respicare-seven.vercel.app/og/home.png",
+        url: "https://respicare-seven.vercel.app/images/hero-slider-1.jpg",
         width: 1200,
         height: 630,
         alt: "Respicare Home",
@@ -36,7 +36,7 @@ export const metadata = {
     title: "Respicare | Advanced Respiratory Care Solutions",
     description:
       "Innovative and trusted respiratory care equipment — explore Respicare’s full product line today.",
-    images: ["/og/home.png"],
+    images: ["/images/hero-slider-1.jpg"],
   },
   robots: {
     index: true,

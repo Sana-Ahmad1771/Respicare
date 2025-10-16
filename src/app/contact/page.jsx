@@ -20,7 +20,7 @@ export const metadata = {
     siteName: "Respicare",
     images: [
       {
-        url: "https://respicare-seven.vercel.app/og/contact.png",
+        url: "https://respicare-seven.vercel.app/images/hero-slider-1.jpg",
         width: 1200,
         height: 630,
         alt: "Contact Respicare",
@@ -34,7 +34,7 @@ export const metadata = {
     title: "Contact Respicare",
     description:
       "Contact Respicare for inquiries, support, or to learn more about our respiratory care solutions.",
-    images: ["/og/contact.png"],
+    images: ["/images/hero-slider-1.jpg"],
   },
   robots: {
     index: true,
