@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import productsData from "../products/productsData.json";
+import productsData from "@/app/components/pages/products/ProductsData.json"
 import { TiStarFullOutline } from "react-icons/ti";
 import { FiFilter } from "react-icons/fi";
 import Image from "next/image";
