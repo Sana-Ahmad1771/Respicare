@@ -2,6 +2,7 @@ import Footer from "../components/common/Footer";
 import Header from "../components/common/Header";
 import Filters from "../components/pages/products/Filters";
 import Products from "../components/pages/products/Products";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "Our Products | Respicare",
@@ -44,8 +45,13 @@ const Page = () => {
   return (
     <>
       <Header />
-      <Products />
-      <Filters />
+
+      {/* ✅ Wrap components using useSearchParams in Suspense */}
+      <Suspense fallback={<div className="text-center py-20">Loading...</div>}>
+        <Products />
+        <Filters />
+      </Suspense>
+
       <Footer />
     </>
   );
