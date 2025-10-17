@@ -17,6 +17,7 @@ import MegaMenu from "./megamenu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const pathname = usePathname();
 
@@ -62,7 +63,7 @@ const Header = () => {
             <span className="flex items-center gap-2">
               <MdOutlineEmail className="text-primary" />
               <span
-                onClick={() => copyToClipboard("info@binali.xyz")}
+                onClick={() => copyToClipboard("info@Respicare.xyz")}
                 className="cursor-pointer hover:underline underline-offset-4"
               >
                 info@Respicare.xyz
@@ -88,12 +89,12 @@ const Header = () => {
       </div>
 
       {/* === Navbar === */}
-      <nav className="bg-white">
+      <nav className="bg-white relative">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-16 xl:px-24 flex justify-between items-center h-20">
           <Link href="/" className="flex-shrink-0">
             <Image
               src={Logo}
-              alt="binali-logo"
+              alt="respicare-logo"
               width={140}
               height={40}
               className="w-auto h-14"
@@ -114,7 +115,7 @@ const Header = () => {
               </Link>
             </li>
             <li className="relative flex items-center group">
-              <MegaMenu />
+              <MegaMenu setIsMegaMenuOpen={setIsMegaMenuOpen} />
               <span
                 className={`absolute left-0 bottom-0 w-full h-0.5 rounded-t-md transition-all duration-300 ${
                   pathname.startsWith("/services")
@@ -129,17 +130,6 @@ const Header = () => {
                 <span className={navItemBorderClass("/products")} />
               </Link>
             </li>
-            {/* <li>
-              <Link href="/partners" className={navItemClass("/partners")}>
-                Our Partners{" "}
-                <span className={navItemBorderClass("/partners")} />
-              </Link>
-            </li> */}
-            {/* <li>
-              <Link href="/career" className={navItemClass("/career")}>
-                Career <span className={navItemBorderClass("/career")} />
-              </Link>
-            </li> */}
             <li>
               <Link href="/contact" className={navItemClass("/contact")}>
                 Contact <span className={navItemBorderClass("/contact")} />
@@ -155,6 +145,19 @@ const Header = () => {
             {!isMenuOpen && <AlignRight size={30} />}
           </button>
         </div>
+
+        {/* Background Blur when Mega Menu Open */}
+        <AnimatePresence>
+          {isMegaMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              className="fixed inset-0 top-[130px] bg-white/30 backdrop-blur-md z-30"
+            />
+          )}
+        </AnimatePresence>
 
         {/* Mobile Menu */}
         <AnimatePresence>
@@ -186,7 +189,6 @@ const Header = () => {
                   { href: "/", label: "Home" },
                   { href: "/about", label: "About Us" },
                   { href: "/products", label: "Our Products" },
-                  // { href: "/career", label: "Career" },
                   { href: "/contact", label: "Contact" },
                 ].map((item) => (
                   <li key={item.href}>
@@ -209,6 +211,7 @@ const Header = () => {
         </AnimatePresence>
       </nav>
 
+      {/* Copy Toast */}
       {copied && (
         <div className="fixed bottom-5 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-2 rounded shadow-md text-sm z-50">
           Copied to clipboard!

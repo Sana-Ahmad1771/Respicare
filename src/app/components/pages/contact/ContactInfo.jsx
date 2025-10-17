@@ -23,7 +23,7 @@ export default function ContactInfo() {
         </p>
 
         {/* Contact Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 mt-10">
           {/* Card 1 */}
           <div className="group relative bg-white text-gray-800 rounded-2xl shadow-lg pt-16 pb-10 px-6 transition-transform duration-500 hover:-translate-y-2">
             {/* Floating Icon */}

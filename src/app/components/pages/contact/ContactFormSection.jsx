@@ -170,13 +170,12 @@ export default function ContactFormSection() {
           </div>
 
           {/* ===== Right Map Section ===== */}
-          <div className="order-1 lg:order-2 sm:h-[400px] lg:h-full flex items-stretch">
+          <div className="order-1 lg:order-2 h-[200px] sm:h-[400px] md:h-[500px] lg:h-full flex items-stretch">
             <div className="w-full h-full rounded-2xl overflow-hidden shadow-md">
               <iframe
                 title="Respicare Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1526.372869072996!2d55.63985555262137!3d25.362259659742712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5f30052b85655%3A0x9b5a0b92d554126c!2sJurhy%20Online%20Store!5e0!3m2!1sen!2s!4v1760528101877!5m2!1sen!2s"
-                width="600"
-                height="450"
+                fill
                 className="border-0 w-full h-full"
                 allowFullScreen=""
                 loading="lazy"
